@@ -8,9 +8,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  //webpack bulid 위한 package.json script 추가
+  //해당파일을
   entry: {
     app: './client',
   },
+  //모듈 로더를 통해
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -31,6 +34,7 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
   ],
+  //합친다
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
